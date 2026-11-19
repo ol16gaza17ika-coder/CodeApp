@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CodeTamagotchi.HomePage" Background="{StaticResource Bg}" NavigationPage.HasNavigationBar="False">
+  <ScrollView><VerticalStackLayout Padding="24" Spacing="14">
+    <Grid ColumnDefinitions="*,Auto">
+      <Label x:Name="Hello" TextColor="{StaticResource Ink}" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"/>
+      <Border Grid.Column="1" Padding="12,6" BackgroundColor="White" StrokeShape="RoundRectangle 8" Stroke="#DDD8CC">
+        <Label x:Name="Streak" TextColor="{StaticResource Ink}" FontAttributes="Bold"/></Border>
+    </Grid>
+    <Border Style="{StaticResource CardBox}"><VerticalStackLayout Spacing="8">
+      <Image x:Name="PetImg" HeightRequest="170"/>
+      <Border BackgroundColor="#EEEBE3" StrokeShape="RoundRectangle 10" Padding="12,8" Stroke="Transparent"><Label x:Name="Status" TextColor="{StaticResource Ink}" HorizontalTextAlignment="Center" FontAttributes="Bold"/></Border>
+      <Label x:Name="PetName" Style="{StaticResource Title}" FontSize="22"/>
+      <ProgressBar x:Name="Bar" ProgressColor="{StaticResource Mint}" BackgroundColor="#EEEBE3"/>
+      <Label x:Name="XpText" TextColor="{StaticResource Muted}" HorizontalTextAlignment="Center" FontSize="12"/>
+      <Label x:Name="Profile" TextColor="{StaticResource Muted}" HorizontalTextAlignment="Center" FontSize="12"/>
+    </VerticalStackLayout></Border>
+    <VerticalStackLayout x:Name="Levels" Spacing="10"/>
+    <Button Text="Выйти" Style="{StaticResource Ghost}" Clicked="OnLogout"/>
+  </VerticalStackLayout></ScrollView>
+</ContentPage>

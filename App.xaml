@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CodeTamagotchi.App">
+  <Application.Resources>
+    <Color x:Key="Mint">#3E9E6B</Color>
+    <Color x:Key="Card">#FFFFFF</Color>
+    <Color x:Key="Muted">#6F7A72</Color>
+    <Color x:Key="Ink">#26332B</Color>
+    <SolidColorBrush x:Key="Bg" Color="#F6F4EF"/>
+    <Style TargetType="Entry"><Setter Property="TextColor" Value="{StaticResource Ink}"/><Setter Property="PlaceholderColor" Value="{StaticResource Muted}"/></Style>
+    <Style x:Key="Title" TargetType="Label"><Setter Property="TextColor" Value="{StaticResource Ink}"/><Setter Property="FontSize" Value="26"/><Setter Property="FontAttributes" Value="Bold"/><Setter Property="HorizontalTextAlignment" Value="Center"/></Style>
+    <Style x:Key="Neon" TargetType="Button"><Setter Property="BackgroundColor" Value="{StaticResource Mint}"/><Setter Property="TextColor" Value="White"/><Setter Property="FontAttributes" Value="Bold"/><Setter Property="CornerRadius" Value="10"/><Setter Property="HeightRequest" Value="48"/></Style>
+    <Style x:Key="Ghost" TargetType="Button"><Setter Property="BackgroundColor" Value="Transparent"/><Setter Property="TextColor" Value="{StaticResource Muted}"/></Style>
+    <Style x:Key="CardBox" TargetType="Border"><Setter Property="BackgroundColor" Value="{StaticResource Card}"/><Setter Property="Stroke" Value="#DDD8CC"/><Setter Property="Padding" Value="16"/><Setter Property="StrokeShape" Value="RoundRectangle 12"/></Style>
+  </Application.Resources>
+</Application>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CodeTamagotchi.LoginPage" Background="{StaticResource Bg}" NavigationPage.HasNavigationBar="False">
+  <VerticalStackLayout VerticalOptions="Center" Padding="28" Spacing="14">
+    <Image Source="pet_0_0.png" HeightRequest="150" x:Name="Egg"/>
+    <Label Text="Учим C#" Style="{StaticResource Title}" TextColor="{StaticResource Mint}"/>
+    <Label Text="Учись понемногу — хамелеон будет расти вместе с тобой" TextColor="{StaticResource Muted}" HorizontalTextAlignment="Center"/>
+    <Border Style="{StaticResource CardBox}"><VerticalStackLayout Spacing="8">
+      <Entry x:Name="Email" Placeholder="email" Keyboard="Email"/>
+      <Entry x:Name="Pass" Placeholder="пароль" IsPassword="True"/>
+      <Label x:Name="Err" TextColor="#FB7185" IsVisible="False"/>
+    </VerticalStackLayout></Border>
+    <Button Text="Войти" Style="{StaticResource Neon}" Clicked="OnLogin"/>
+    <Button Text="Нет аккаунта? Регистрация" Style="{StaticResource Ghost}" Clicked="OnReg"/>
+  </VerticalStackLayout>
+</ContentPage>
